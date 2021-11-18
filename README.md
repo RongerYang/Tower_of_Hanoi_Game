@@ -1,8 +1,6 @@
 # Tower_of_Hanoi_Game
-_________________________
 
 ## Rules
-***
 The goal is to move all the disks from one rod to another rod without violating the sequence of arrangement. 
 A few rules to be followed for Tower of Hanoi are the following:
 - Only one disk can be moved among the rods at any given time.
@@ -10,7 +8,6 @@ A few rules to be followed for Tower of Hanoi are the following:
 - No large disk can sit over a small disk.
 
 ## Algorithm
-***
 The Tower of Hanoi Game with n number of disks and **3** rods could result in a minimal number of moves of **2<sup>n</sup> - 1**
 using the following strategy:
 - Step 1: Move n-1 disks from source rod to aux rod
@@ -55,7 +52,6 @@ T(d, 4) = 2 ∗ T(d − k, 4) + T(k, 3)
 Analysis of this recursion results in a closed-form solution for the minimizing value of k.
 
 ## Files
-***
 - Models
   - disk_model.py &rarr; Disk
   - move_sequence_model.py &rarr; MoveSequence
@@ -71,5 +67,4 @@ Analysis of this recursion results in a closed-form solution for the minimizing 
 
 
 ## Reference
-***
 - [Original souce code](https://pythonturtle.academy/tower-of-hanoi/) for gui_solution_controller.py
