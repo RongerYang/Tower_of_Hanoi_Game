@@ -49,8 +49,141 @@ Analysis of this recursion results in a closed-form solution for the minimizing 
   - console_controller.py
   - gui_viewables.py
   - gui_controller.py
-  - gui_solution_controller.py
+  - gui_solution_controller.py (for 3 rods only)
   - game_controller.py
+
+## Examples
+
+#### Text Console Version With Solution
+```
+Enter the number of disks: 3
+Choose the game version to start the Tower of Hanoi Game.
+Enter 'g' for GUI version, enter 'c' for text console version: c
+Instructions: '1 3' means move top disk from the first rod to the third rod.
+Enter 'e' to exit the game, enter 's' to see the solution.
+   -                       
+  ---                      
+ -----                     
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 1: s
+Move # 1: Move disk from rod 0 to rod 2.
+                           
+  ---                      
+ -----               -     
+=======  =======  =======  
+Move # 2: Move disk from rod 0 to rod 1.
+                           
+                           
+ -----     ---       -     
+=======  =======  =======  
+Move # 3: Move disk from rod 2 to rod 1.
+                           
+            -              
+ -----     ---             
+=======  =======  =======  
+Move # 4: Move disk from rod 0 to rod 2.
+                           
+            -              
+           ---     -----   
+=======  =======  =======  
+Move # 5: Move disk from rod 1 to rod 0.
+                           
+                           
+   -       ---     -----   
+=======  =======  =======  
+Move # 6: Move disk from rod 1 to rod 2.
+                           
+                    ---    
+   -               -----   
+=======  =======  =======  
+Move # 7: Move disk from rod 0 to rod 2.
+                     -     
+                    ---    
+                   -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Your Number of Moves: 7
+Solved! Congratulations!
+```
+
+
+#### Text Console Version With User Play Mode
+```
+Enter the number of disks: 3
+Choose the game version to start the Tower of Hanoi Game.
+Enter 'g' for GUI version, enter 'c' for text console version: c
+Instructions: '1 3' means move top disk from the first rod to the third rod.
+Enter 'e' to exit the game, enter 's' to see the solution.
+   -                       
+  ---                      
+ -----                     
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 1: 1 3
+                           
+  ---                      
+ -----               -     
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 2: 1 2
+                           
+                           
+ -----     ---       -     
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 3: 3 2
+                           
+            -              
+ -----     ---             
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 4: 1 3
+                           
+            -              
+           ---     -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 5: 2 3
+                           
+                     -     
+           ---     -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 6: 3 1
+                           
+                           
+   -       ---     -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 7: 2 3
+                           
+                    ---    
+   -               -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 8: 1 2
+                           
+                    ---    
+            -      -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 9: 1 3
+Source rod is empty.
+                           
+                    ---    
+            -      -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Please Enter Move 9: 2 3
+                     -     
+                    ---    
+                   -----   
+=======  =======  =======  
+Minimal Number of Moves: 7
+Your Number of Moves: 9
+Solved! Congratulations!
+```
 
 
 ## Reference

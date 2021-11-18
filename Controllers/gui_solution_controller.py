@@ -124,25 +124,25 @@ class GUISolutionController:
     Redraw and move the ring position.
     
     @param GUISolutionController self: this GUISolutionController self
-    @param str PP: 
-    @param str QQ: 
+    @param str source: 
+    @param str dest: 
     @rtype: None
     """
-    def move_ring(self, PP, QQ):
-        if PP == "A":
+    def move_ring(self, source, dest):
+        if source == "A":
             x = -250
             P = A
-        elif PP == "B":
+        elif source == "B":
             x = 0
             P = B
         else:
             x = 250
             P = C
 
-        if QQ == "A":
+        if dest == "A":
             x2 = -250
             Q = A
-        elif QQ == "B":
+        elif dest == "B":
             x2 = 0
             Q = B
         else:
@@ -182,22 +182,22 @@ class GUISolutionController:
 
 
     """
-    Move rings in X to Z
+    Move rings in source to dest
     
     @param GUISolutionController self: this GUISolutionController self
-    @param str X: source rod
-    @param str Y: auxiliary rod
-    @param str Z: destination rod
+    @param str source: source rod
+    @param str aux: auxiliary rod
+    @param str dest: destination rod
     @param int n: number of disks
     @rtype: None
     """
-    def tower_of_hanoi(self, X, Y, Z, n):
+    def tower_of_hanoi(self, source, aux, dest, n):
         if n == 1:
-            self.move_ring(X, Z)
+            self.move_ring(source, dest)
             return
-        self.tower_of_hanoi(X, Z, Y, n - 1)
-        self.move_ring(X, Z)
-        self.tower_of_hanoi(Y, X, Z, n - 1)
+        self.tower_of_hanoi(source, dest, aux, n - 1)
+        self.move_ring(source, dest)
+        self.tower_of_hanoi(aux, source, dest, n - 1)
 
     """
     Start this GUISolutionController.
