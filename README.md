@@ -20,7 +20,9 @@ using the following strategy:
 #### For 4 Rods
 The Tower of Hanoi Game with n number of disks and **4** rods could result in a minimal number of moves
 
-<img src="https://latex.codecogs.com/svg.image?\bg_white&space;&space;M(n)&space;=\begin{cases}1&space;&&space;n&space;=&space;1\\2&space;*&space;M(n-i)&space;&plus;&space;2^i&space;-&space;1&space;&&space;otherwise\end{cases}&space;" title="\bg_white M(n) =\begin{cases}1 & n = 1\\2 * M(n-i) + 2^i - 1 & otherwise\end{cases} " />
+<img src="https://latex.codecogs.com/png.image?\dpi{50}&space;\bg_black&space;&space;M(n)&space;=\begin{cases}1&space;&&space;n&space;=&space;1\\2&space;*&space;M(n-i)&space;&plus;&space;2^i&space;-&space;1&space;&&space;otherwise\end{cases}&space;" title="\bg_black M(n) =\begin{cases}1 & n = 1\\2 * M(n-i) + 2^i - 1 & otherwise\end{cases} " />
+
+<img src="https://latex.codecogs.com/png.image?\dpi{80}&space;&space;M(n)&space;=\begin{cases}1&space;&&space;n&space;=&space;1\\2&space;*&space;M(n-i)&space;&plus;&space;2^i&space;-&space;1&space;&&space;otherwise\end{cases}&space;" title=" M(n) =\begin{cases}1 & n = 1\\2 * M(n-i) + 2^i - 1 & otherwise\end{cases} " />
 
 using the following strategy:
 - Step 1: Move the smallest d-k disks from rod 0 to rod 1, using all 4 rods.
