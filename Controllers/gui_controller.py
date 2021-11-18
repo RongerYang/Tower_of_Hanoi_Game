@@ -14,7 +14,7 @@ from Models.tohg_model import ToHG, IllegalMoveError
 class GUIController:
 
     """
-    Initialize a new GUIView.
+    Initialize a new GUIController.
 
     @param GUIController self:
     @param int number_of_disks: number of disks for first rod
@@ -23,6 +23,7 @@ class GUIController:
     @param float content_height: height, in pixels, of working area
     @param float disk_scale: height in pixels for showing disk thicknesses, and to
                 scale disk diameters
+    @rtype: None
     """
     def __init__(self, number_of_disks, number_of_rods, content_width,
                  content_height, disk_scale):
@@ -78,7 +79,7 @@ class GUIController:
             self.select_disk(disk)
 
     """ 
-    React to disk being clicked: if not in the middle of blinking
+    React to rod being clicked: if not in the middle of blinking
     then select disk for moving, or for moving onto.
 
     @param GUIController self:
@@ -190,7 +191,7 @@ class GUIController:
         return self._rods.index(rod)
 
     """
-    Show the number of moves so far.
+    Show the number of moves so far and the minimal number of moves on tk.
 
     @param GUIController self:
     @rtype: None

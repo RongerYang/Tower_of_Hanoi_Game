@@ -22,7 +22,7 @@ class ToHG:
 
     @param ToHG self: this ToHG self
     @param int rod_num: number of rods if applicable, or 3 rods as default
-    @param list[Disk] disk_num: number of disks at the first rod if applicable,
+    @param int disk_num: number of disks at the first rod if applicable,
         or 3 disks as default
     @rtype: None
     """
@@ -140,12 +140,6 @@ class ToHG:
             if len(self.rods[i]) > 0:
                 return False
         return True
-
-
-    """
-
-    """
-    # def generate_model(self):
 
 
     """

@@ -1,5 +1,12 @@
 """
 A GUI Solution Controller for Tower of Hanoi Game with number of rods = 3
+
+reference source:
+https://pythonturtle.academy/tower-of-hanoi/
+
+=== Attributes ===
+    @param int _num_disks: the number of disks
+    to run this GUISolutionController
 """
 
 import turtle
@@ -30,11 +37,29 @@ T = []  # list of turtles
 
 class GUISolutionController:
 
+    """
+    Initialize a GUISolutionController.
+
+    @param GUISolutionController self: this GUISolutionController self
+    @param int num_disks: the number of disks
+    @rtype: None
+    """
     def __init__(self, num_disks):
         self._num_disks = num_disks
         # global ring_width_max, ring_width_min, ring_ratio, ring_delta
 
-
+    """
+    Draw lines to this GUISolutionController.
+    
+    @param GUISolutionController self: this GUISolutionController self
+    @param float x: x-coordinate to start drawing
+    @param float y: y-coordinate to start drawing
+    @param float heading: angle to heading
+    @param float length: distance to move forward
+    @param float pensize: size of the pen
+    @param str color: color of the line
+    @rtype: None
+    """
     def draw_line(self, x, y, heading, length, pensize, color):
         turtle.up()
         turtle.goto(x, y)
@@ -44,14 +69,28 @@ class GUISolutionController:
         turtle.pensize(pensize)
         turtle.fd(length)
 
+    """
+    Draw scenes to this GUISolutionController.
 
+    @param GUISolutionController self: this GUISolutionController self
+    @rtype: None
+    """
     def draw_scene(self):
         turtle.bgcolor('light blue')
         self.draw_line(-600, -100, 0, 1200, 10, 'brown')
         for i in range(-250, 251, 250):
             self.draw_line(i, -93, 90, peg_height, 5, 'black')
 
+    """
+    Draw a single ring to this GUISolutionController.
 
+    @param GUISolutionController self: this GUISolutionController self
+    @param float r: radius of the ring
+    @param float x: x-coordinate to start drawing
+    @param float k: 
+    @param float extra: 
+    @rtype: None
+    """
     def draw_single_ring(self, r, x, k, extra=0):
         global ring_delta
         w = ring_width_max - ring_delta * (r - 1)
@@ -67,7 +106,12 @@ class GUISolutionController:
             T[r].left(90)
         T[r].end_fill()
 
+    """
+    Draw rings to this GUISolutionController.
 
+    @param GUISolutionController self: this GUISolutionController self
+    @rtype: None
+    """
     def draw_rings(self):
         for i in range(len(A)):
             self.draw_single_ring(A[i], -250, i)
@@ -76,7 +120,14 @@ class GUISolutionController:
         for i in range(len(C)):
             self.draw_single_ring(C[i], 250, i)
 
-
+    """
+    Redraw and move the ring position.
+    
+    @param GUISolutionController self: this GUISolutionController self
+    @param str PP: 
+    @param str QQ: 
+    @rtype: None
+    """
     def move_ring(self, PP, QQ):
         if PP == "A":
             x = -250
@@ -130,7 +181,16 @@ class GUISolutionController:
         return
 
 
-    # move rings in X to Z
+    """
+    Move rings in X to Z
+    
+    @param GUISolutionController self: this GUISolutionController self
+    @param str X: source rod
+    @param str Y: auxiliary rod
+    @param str Z: destination rod
+    @param int n: number of disks
+    @rtype: None
+    """
     def tower_of_hanoi(self, X, Y, Z, n):
         if n == 1:
             self.move_ring(X, Z)
@@ -139,6 +199,12 @@ class GUISolutionController:
         self.move_ring(X, Z)
         self.tower_of_hanoi(Y, X, Z, n - 1)
 
+    """
+    Start this GUISolutionController.
+    
+    @param GUISolutionController self: this GUISolutionController self
+    @rtype: None
+    """
     def start_gui(self):
         self.draw_scene()
         turtle.update()

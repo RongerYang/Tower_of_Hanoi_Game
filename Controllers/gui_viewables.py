@@ -29,7 +29,7 @@ from Models.disk_model import Disk
 class PlatformView:
 
     """
-    Create a new PlatformView
+    Create a new PlatformView.
 
     @param PlatformView self:
     @param float width: width in pixels of view
@@ -38,6 +38,7 @@ class PlatformView:
     @param float thickness: vertical extent of platform
     @param float x_center: horizontal center of this platform
     @param float y_center: vertical center of platform
+    @rtype: None
     """
     def __init__(self, width, click_handler, canvas,
                  thickness, x_center, y_center):
@@ -63,7 +64,7 @@ class PlatformView:
                              lambda _: click_handler(self))
 
     """ 
-    Place rectangular image of this disk/rod at (x_center, y_center)
+    Place rectangular image of this disk/rod at (x_center, y_center).
 
     @param PlatformView self:
     @param float x_center: horizontal center of platform
@@ -99,6 +100,7 @@ class DiskView(Disk, PlatformView):
     @param float x_center:
                 horizontal center of disk
     @param float y_center: vertical center or disk
+    @rtype: None
     """
     def __init__(self, size, width, click_handler, canvas, thickness,
                  x_center, y_center):
@@ -114,6 +116,7 @@ class DiskView(Disk, PlatformView):
 
     @param DiskView self: this DiskView self
     @param bool highlighting: whether to highlight
+    @rtype: None
     """
     def highlight(self: 'DiskView', highlighting: bool):
         self.canvas.itemconfigure(self.index,
@@ -126,7 +129,7 @@ class RodView(PlatformView):
 
 
     """
-    Create a new RodView
+    Create a new RodView.
 
     @type self: RodView
     @type width: float

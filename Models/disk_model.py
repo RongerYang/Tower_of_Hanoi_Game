@@ -10,7 +10,7 @@ be added to a ToHG object.
 class Disk:
 
     """
-    Initialize a Disk object with radius_size.
+    Initialize a Disk object with size.
 
     @param Disk self: this Disk self
     @param int size: initial size of this Disk self
