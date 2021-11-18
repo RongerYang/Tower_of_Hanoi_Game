@@ -8,6 +8,8 @@ A few rules to be followed for Tower of Hanoi are the following:
 - No large disk can sit over a small disk.
 
 ## Algorithm
+
+#### For 3 Rods
 The Tower of Hanoi Game with n number of disks and **3** rods could result in a minimal number of moves of **2<sup>n</sup> - 1**
 using the following strategy:
 - Step 1: Move n-1 disks from source rod to aux rod
@@ -15,25 +17,10 @@ using the following strategy:
 - Step 3: Move n-1 disks from aux rod to dest rod
 
 
+#### For 4 Rods
 The Tower of Hanoi Game with n number of disks and **4** rods could result in a minimal number of moves
 
-\begin{document}
-\[
-M(n)=
-\begin{cases}
-1 &\text{if } n\eq 1\\
-2 * M(n-i) + 2^i - 1 &\text{otherwise}.
-\end{cases}
-\] 
-\end{document}
-
-```equation
-M(n) = ![equation](\Bigg\{   )
-```
-
-\begin{equation}
-    M(n) = \begin{cases} \left{ \end{cases}
-\end{equation}
+<img src="https://latex.codecogs.com/svg.image?\bg_white&space;&space;M(n)&space;=\begin{cases}1&space;&&space;n&space;=&space;1\\2&space;*&space;M(n-i)&space;&plus;&space;2^i&space;-&space;1&space;&&space;otherwise\end{cases}&space;" title="\bg_white M(n) =\begin{cases}1 & n = 1\\2 * M(n-i) + 2^i - 1 & otherwise\end{cases} " />
 
 using the following strategy:
 - Step 1: Move the smallest d-k disks from rod 0 to rod 1, using all 4 rods.
