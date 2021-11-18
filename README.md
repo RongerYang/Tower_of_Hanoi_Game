@@ -49,8 +49,8 @@ Analysis of this recursion results in a closed-form solution for the minimizing 
   - console_controller.py
   - gui_viewables.py
   - gui_controller.py
-  - gui_solution_controller.py (for 3 rods only)
-  - game_controller.py
+  - gui_solution_controller.py (for 3 rods only; main to run the GUI solution)
+  - game_controller.py (main to run the text console version in solution mode and user play mode and GUI user play mode)
 
 ## Examples
 
